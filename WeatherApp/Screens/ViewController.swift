@@ -52,6 +52,13 @@ class ViewController: UIViewController {
             self.forecastTableView.reloadData()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetailView" {
+            let nextController = segue.destination as! DetailViewController
+            nextController.detailViewModel = DetailViewModel(dailyItem: sender as! Daily)
+        }
+    }
 
 }
 
@@ -73,6 +80,13 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if let dataArray = self.viewModel.modelToPopulate?.daily {
+            let dailyDataToDisplay = dataArray[indexPath.row]
+            self.performSegue(withIdentifier: "showDetailView", sender: dailyDataToDisplay)
+        }
+    }
     
 }
 
