@@ -1,19 +1,18 @@
 //
-//  ViewController.swift
+//  DetailViewController.swift
 //  WeatherApp
 //
-//  Created by Muhammad Oneeb on 08/02/2022.
+//  Created by Muhammad Oneeb on 09/02/2022.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
-
+    
 }
-

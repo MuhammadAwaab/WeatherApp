@@ -23,25 +23,6 @@ class ServiceProvider<T: Service> {
         call(service.urlRequest, completion: completion)
     }
 
-    func load<U>(service: T, decodeType: U.Type, completion: @escaping (Result<U>) -> Void) where U: Decodable {
-        call(service.urlRequest) { result in
-            switch result {
-            case .success(let data):
-                let decoder = JSONDecoder()
-                do {
-                    let resp = try decoder.decode(decodeType, from: data)
-                    completion(.success(resp))
-                }
-                catch {
-                    completion(.failure(error))
-                }
-            case .failure(let error):
-                completion(.failure(error))
-            case .empty:
-                completion(.empty)
-            }
-        }
-    }
 }
 
 extension ServiceProvider {
