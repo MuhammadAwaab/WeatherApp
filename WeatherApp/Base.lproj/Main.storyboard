@@ -23,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pa4-9X-djy">
-                                <rect key="frame" x="50" y="180" width="314" height="632"/>
+                                <rect key="frame" x="50" y="180" width="314" height="141"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Feels Like:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzZ-ow-BIU">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="25"/>
@@ -62,7 +62,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZa-Qg-735">
-                                        <rect key="frame" x="0.0" y="100" width="314" height="532"/>
+                                        <rect key="frame" x="0.0" y="100" width="314" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="Icy-Ko-lo6"/>
                                         </constraints>
@@ -78,7 +78,6 @@ description</string>
                         <viewLayoutGuide key="safeArea" id="TdO-13-cp4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TdO-13-cp4" firstAttribute="bottom" secondItem="Pa4-9X-djy" secondAttribute="bottom" constant="50" id="EUd-Ye-ksj"/>
                             <constraint firstItem="aeV-e1-Zrw" firstAttribute="centerX" secondItem="sYS-95-PQ6" secondAttribute="centerX" id="PjB-Uc-fxx"/>
                             <constraint firstItem="Pa4-9X-djy" firstAttribute="top" secondItem="aeV-e1-Zrw" secondAttribute="bottom" constant="20" id="bFO-C8-FDh"/>
                             <constraint firstItem="TdO-13-cp4" firstAttribute="trailing" secondItem="Pa4-9X-djy" secondAttribute="trailing" constant="50" id="dph-03-62f"/>
@@ -199,6 +198,10 @@ description</string>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gSA-z8-MXU" id="0OD-M4-OqI"/>
+                                    <outlet property="delegate" destination="gSA-z8-MXU" id="guP-nr-1EG"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="URq-cn-DS5"/>
