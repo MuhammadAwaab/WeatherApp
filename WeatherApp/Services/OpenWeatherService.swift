@@ -7,9 +7,9 @@
 
 import Foundation
 
-let apiKey = "90b3dbeb9647d06e116c66c11f0f7896"
+let apiKey = "92f11100e1a047b08ae13580966f1d32"
 
-let sampleNetworkCall = "https://api.openweathermap.org/data/2.5/onecall?lat=31.52&lon=74.35&exclude=hourly,minutely,alerts&appid=90b3dbeb9647d06e116c66c11f0f7896"
+let sampleNetworkCall = "https://api.openweathermap.org/data/2.5/onecall?lat=31.52&lon=74.35&exclude=hourly,minutely,alerts&appid=92f11100e1a047b08ae13580966f1d32"
 
 
 enum OpenWeatherService {
